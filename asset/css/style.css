@@ -299,21 +299,24 @@ nav{
 .top-section .swiper-slide.swiper-slide-next{
   opacity: 0;
 }
-.outdoor__section .swiper-container{
-  overflow: visible;
+.outdoor__section .swiper-container, .slider .swiper-container{
+  overflow: hidden;
 }
-.outdoor__section .swiper-button-next, .outdoor__section .swiper-button-prev{
+.outdoor__section .swiper-button-next, .outdoor__section .swiper-button-prev, .slider .swiper-button-next, .slider .swiper-button-prev{
   position: absolute;
   top: -60px;
   margin-top: -22px;
   z-index: 17;
   
 }
-.outdoor__section .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+.outdoor__section .swiper-button-prev, .swiper-container-rtl .swiper-button-next, .slider .swiper-button-prev{
   right: 43px;left: auto;
 }
 .outdoor__section .swiper-button-next{
 
+}
+.slider{
+  position: relative;
 }
 
 /*Swipper slider */

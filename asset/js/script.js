@@ -12,7 +12,9 @@ $swiperSelector.each(function(index) {
     var slidesMobile = $this.data('slides-mobile') ? $this.data('slides-mobile') : 2.5;
     var spaceBetween = $this.data('space-between') ? $this.data('space-between'): 20;
     var watchOverflow = $this.data('watch-overflow') ? $this.data('watch-overflow') : true;
-  
+    var carouselPrevButton = $(this).parent().find('.carousel-navigation-prev');
+    console.log(carouselPrevButton);
+    var carouselNextButton = $(this).parent().find('.carousel-navigation-next');
     var swiper = new Swiper('.swiper-sliders-' + index, {
       direction: 'horizontal',
       loop: loop,
@@ -46,8 +48,8 @@ $swiperSelector.each(function(index) {
 
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: carouselNextButton,
+        prevEl: carouselPrevButton
       },
       scrollbar: {
         el: '.swiper-scrollbar',
