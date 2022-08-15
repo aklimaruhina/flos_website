@@ -275,6 +275,95 @@ nav{
     }
 
 }
+.Swipercategory{
+  width: 100%;
+  height: 100%;
+}
+ .Swipercategory .swiper-slide{
+  margin-bottom: 60px;
+ }
+
+.slide-wrap,.ourtdoor-section{
+  position: relative;
+  height: 100%;
+}
+
+.slide-wrap .swiper {
+  width: 100%;
+  height: calc(100% - 60px);
+}
+
+.slide-wrap .swiper-slide{
+  /*text-align: center;*/
+  /*font-size: 18px;*/
+  /*background: #fff;*/
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  margin-bottom: 100px
+}, 
+
+.slide-wrap .swiper-slide img , .Swipercategory .swiper-slide img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slider Navigations */
+.swiper-scrollbar {
+  background: #d6d6d6;
+}
+
+.swiper-horizontal > .swiper-scrollbar{ 
+   border-radius: 2px;
+  height: 5px;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-controlls {
+  position: absolute;
+top: 30px;
+/*left: 0;*/
+width: 100%;
+z-index: 9;
+/*display: flex;*/
+align-items: center;
+justify-content: flex-end;
+right: 46px;
+}
+.swiper-prev.swiper-button-disabled{
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+ 
+}
+.swiper-next.swiper-button-disabled{
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+ 
+}
+
+.swiper-buttons, .swiper-controlls {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-buttons > div {
+  z-index: 99;
+  font-size: 18px;
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.swiper-controlls .swiper-page {
+  font-size: 14px;
+  width: auto!important;
+}
 .top-section .swiper-slide {
         text-align: left;
         font-size: 18px;
@@ -315,33 +404,7 @@ nav{
 .outdoor__section .swiper-button-next{
 
 }
-.slider{
-  position: relative;
-}
 
-/*Swipper slider */
-.slider {
-  /*max-width: 1200px;*/
-  margin: 0 auto;
-  padding-bottom: 40px;
-}
-
-.swiper-container {
-  padding-bottom: 20px;
-}
-
-.swiper-scrollbar {
-  background: #d6d6d6;
-}
-
-.swiper-container-horizontal > .swiper-scrollbar {
-  border-radius: 2px;
-  height: 5px;
-  width: 100%;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 .basic-img img {
   width: 100%;
