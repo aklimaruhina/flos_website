@@ -72,6 +72,32 @@
       .ReadMore {
           display: block;
       }
+      .swiper-controlls{
+        top : -8px;
+      }
+      .accordion-item{
+        border: 0 !important;
+        background: transparent;
+      }
+      .accordion-button{
+        padding: 18px 0px 14px 0;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-family: Avenir, sans-serif;
+        background: transparent;
+        border-bottom: 1px solid #939393;
+        font-weight: 800;
+      }
+      .accordion-button:focus{
+        border-color: transparent;
+        box-shadow: none;
+        border-bottom: 1px solid #939393
+      }
+      .accordion-button:not(.collapsed){
+        color: #000;
+        background: transparent;
+        box-shadow: none;
+      }
     </style>
   </head>
   <body>
@@ -316,7 +342,7 @@
         Specifications
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
@@ -503,7 +529,7 @@
           <div class="col-lg-12">
             <div class="slider__header">
               <div class="slider__header-content aos-animate aos-init" data-aos="fade-right">
-                <span class="slider__header-sub">IN THE SPOTLIGHT</span>
+                <span class="details__title">IN THE SPOTLIGHT</span>
               </div>
             </div>
           </div>
@@ -529,26 +555,50 @@
                   <img src="asset/img/room/rooms-bedroom-flos-07.jpg" alt=""> 
                 </figure>
                 
-                <h2 class="basic-entry__title">
-                  Living Room
+                <h2 class="product-title_two">
+                  Mayday
                 </h2>
-                <p class="basic-entry__description">In the core environment of the home, light is a material that can express the unexpected and illuminate surprising emotions.</p>
+                <div class="product-designer">
+                  <span>Konstantin Grcic</span>
+                </div>
+                <div class="product-variention">
+                  <span>Available in multiple variations</span>
+                </div>
+                <div class="product-price">
+                  <span>£105.00</span>
+                </div>
               </div>
               <div class="swiper-slide aos-init aos-animate" data-aos="zoom-in">
                 <figure class="basic-img">
                   <img src="asset/img/room/rooms-dining-room-flos-06.jpg" alt="">
                 </figure>
-                <h2 class="basic-entry__title">
-                  Bed Room
+                <h2 class="product-title_two">
+                  Mayday Outdoor
                 </h2>
-                <p class="basic-entry__description">We want our masterpieces to follow the magical current of essentialism in the most peaceful part of the house. </p>
+                <div class="product-designer">
+                  <span>Konstantin Grcic</span>
+                </div>
+                <div class="product-variention">
+                  <span>Available in multiple variations</span>
+                </div>
+                <div class="product-price">
+                  <span>£105.00</span>
+                </div>
               </div>
               <div class="swiper-slide aos-init aos-animate" data-aos="zoom-in">
                 <figure class="basic-img"><img src="asset/img/room/rooms-kitchen-flos-07.jpg" alt=""></figure>
-                <h2 class="basic-entry__title">
-                  Dining Room
+                <h2 class="product-title_two">
+                  Mayday
                 </h2>
-                <p class="basic-entry__description">Flos writes the future by reading the past, dictating design trends with a universal language. A dynamic expression of the contemporary that applies perfectly to any dining room.</p>
+                <div class="product-designer">
+                  <span>Konstantin Grcic</span>
+                </div>
+                <div class="product-variention">
+                  <span>Available in multiple variations</span>
+                </div>
+                <div class="product-price">
+                  <span>£105.00</span>
+                </div>
               </div>
               <div class="swiper-slide aos-init aos-animate" data-aos="zoom-in">
                 <figure class="basic-img"><img src="asset/img/room/rooms-living-room-flos-11.jpg" alt=""></figure>
@@ -565,7 +615,6 @@
                 <p class="basic-entry__description">Here at Flos, an absolute must-have is the desk lamp: practical, iconic and interpreted by the greatest designers of all times.</p>
               </div>
             </div>  
-            <div class="swiper-scrollbar mt-4"></div>
           </div>
           </div>
         </div>
