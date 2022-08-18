@@ -770,3 +770,67 @@ h2.user-title{
   margin-top: 10px;
   font-weight: 800;
 }
+.rich-text{
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.rich-text h1{
+  text-transform: uppercase;
+  font-size: 150px;
+  margin-top: 40px;
+  color: #000;
+  word-break: break-word;
+}
+.img-grid-contaienr{
+  margin-bottom: 160px;
+  clear: both;
+  position: relative;
+}
+.grid-m{
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+.product-title-2{
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;position: relative;height: 100%;
+}
+.product-titleimg-wrap{overflow: hidden;}
+
+.product-body-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    margin-top: 16px;
+    height: 100%;
+    position: relative;
+}
+
+.product-title-name {
+  margin-bottom: 8px;
+  text-transform: capitalize;
+  color: #000;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.product-designer-name {
+  margin-bottom: 4px;
+  font-size: 16px;
+} 
+
+.product-detail-designer-name {
+}
+
+.product-variation-name {
+  margin-top: auto;
+  font-size: 16px;
+  font-weight: 300;
+  color: #666;
+
+}
+
+.product-pricing-list {
+  margin-top: 10px;font-weight: 800;font-size: 16px;
+}
