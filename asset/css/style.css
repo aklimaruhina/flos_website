@@ -979,3 +979,64 @@ q{
 .mb-160{
   margin-bottom: 160px;
 }
+.mb-40{margin-bottom: 40px;}
+.pt-40{padding-top: 40px;}
+.pb-80{padding-bottom: 80px;}
+
+.left-registration-text h1{
+  font-size: 62px;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  word-break: break-word;
+  line-height: 69px;
+  color: var(--black);
+}
+
+.registration-page{
+  margin-top: 40px;
+}
+.userform .form-control{
+  background: transparent;
+  border:0;
+  border-bottom: 1px solid #666;
+  border-radius: 0;
+  padding-left: 0;
+  transition: border-color 200ms cubic-bezier(.455,.03,.515,.955);
+}
+.btn-black{
+  background: var(--black);
+  border-radius: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  padding: 18px 55px 15px;
+  letter-spacing: .2px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+.userform .form-floating > label{
+  padding-left:0;
+}
+.userform input[type="text"],.userform input[type="password"],.userform input[type="email"], textarea {
+              outline: none;
+              box-shadow:none !important;
+              /*border:1px solid #ccc !important;*/
+}
+.login-list-item{
+  display: flex;
+}
+.login-label p{
+  font-style: italic;
+color: #666;
+font-size: 14px;
+font-weight: 400;
+font-family: "Avenir";
+}
+.ml-53{
+  margin-left: 53px;
+}
+.right-registration{
+  padding-right: 80px;
+}
