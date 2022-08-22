@@ -628,17 +628,21 @@ a.user-info{
 .user-img{
   overflow: hidden;
   position: relative;
+  height: auto;
   transition: transform 400ms cubic-bezier(.455,.03,.515,.955) 300ms,-webkit-transform 400ms cubic-bezier(.455,.03,.515,.955) 300ms;
 }
 a.user-info:hover img{
   transform: scale(1.05);
 }
+
 .user-img img{
   max-width: 100%;
   max-height: 100%;
   width: 100%;
   height: auto;
   opacity: 1;
+  display: inline-block;
+  aspect-ratio: 0.75; /* float value */
   object-fit: cover;
   object-position: center center;
   transition: 400ms transform cubic-bezier(.25,.46,.45,.94),opacity 200ms ease-out,400ms -webkit-transform cubic-bezier(.25,.46,.45,.94);
@@ -807,7 +811,7 @@ h2.user-title{
     position: relative;
 }
 
-.product-title-name {
+.product-title-name, .shop-product-name {
   margin-bottom: 8px;
   text-transform: capitalize;
   color: #000;
@@ -815,15 +819,18 @@ h2.user-title{
   font-size: 24px;
 }
 
-.product-designer-name {
+.product-designer-name, .shop-owner{
   margin-bottom: 4px;
   font-size: 16px;
 } 
 
+.shop-owner{
+  color: #000;
+}
 .product-detail-designer-name {
 }
 
-.product-variation-name {
+.product-variation-name, .shop-variations{
   margin-top: auto;
   font-size: 16px;
   font-weight: 300;
@@ -831,8 +838,14 @@ h2.user-title{
 
 }
 
-.product-pricing-list {
+.product-pricing-list{
   margin-top: 10px;font-weight: 800;font-size: 16px;
+}
+.shop-product-price{
+  margin-top: 10px;font-size: 14px;color: #666;
+}
+.shop-product-price span{
+  font-size: 16px;color: 000;
 }
 .o-col-24 {
     -webkit-box-flex: 0;
@@ -1039,4 +1052,10 @@ font-family: "Avenir";
 }
 .right-registration{
   padding-right: 80px;
+}
+.pagination-link a{
+  display: inline-block;
+  margin-left: 28px;
+}
+.pagination-link a i{color: #000;font-size: 20px;
 }
