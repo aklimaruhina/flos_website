@@ -1059,3 +1059,7 @@ font-family: "Avenir";
 }
 .pagination-link a i{color: #000;font-size: 20px;
 }
+.shop-breadcrumb a{
+  color: #000;
+  text-decoration: underline;font-weight: bold;
+}
