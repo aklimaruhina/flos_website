@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="preload" href="asset/fonts/Avenir-Font/AvenirLTStdRoman.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="asset/fonts/Avenir-Font/AvenirLTStd-Black.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="asset/fonts/Avenir-Font/AvenirLTStd-Book.woff2" as="font" type="font/woff2">
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href=" asset/css/aos.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/media.css">
+
+    <style>
+      @font-face {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('asset/fonts/Avenir-Font/AvenirLTStdRoman.woff2') format('woff2');
+      }
+
+      body {
+        font-family: 'Avenir';
+      }
+      .megamenu {
+        position: static;
+      }
+
+      .megamenu .dropdown-menu {
+        background: none;
+        border: none;
+        width: 100%;
+        left:0;
+      }
+      .dropdown-menu{
+        transition: all 0.5s ease-in-out;
+      }
+      .dropdown-menu.show{
+          -webkit-animation-duration: 0.55s;
+        animation-duration: 0.55s;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-bottom"
+                id="header">
+
+            <nav class="mobile-nav navbar-light d-lg-none">
+                <div class="navbar">
+                    <div class="container">
+                        <!-- mobile nav -->
+                        <div class="d-flex justify-content-between w-100">
+                            <a class="navbar-brand"
+                               href="#">Logo</a>
+                            <div class="navbar-right d-flex align-items-center">
+                                <div class="icon mx-3">
+                                    <i class="fa-solid fa-magnifying-glass "></i>
+                                </div>
+                                <div class="icon mx-3">
+                                    <i class="fa-solid fa-cart-plus "></i>
+                                </div>
+                                <button class="navbar-toggler"
+                                        id="navbar-toggler"
+                                        type="button">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg position-absolute navbar-light d-none d-lg-block w-100"
+                 id="navbar">
+                <div class="container-fluid px-5">
+                    <a class="navbar-brand d-none d-lg-block"
+                       href="#">Logo</a>
+                    <div class="navbar-collapse">
+                        <div class="submenu-top d-lg-none d-flex justify-content-between">
+                            <h2 class="display-5 fw-bold">Menu</h2>
+                            <span class="times display-5 closeNav">&#215;
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 pb-2 pb-lg-0 w-100">
+                        <li class="nav-item dropdown megamenu"><a id="megamneu" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold">Shop Products </a>
+                          <div aria-labelledby="megamneu" class="dropdown-menu border-0 p-0 m-0">
+                             <div class="container">
+                                  <div class="row">
+                                    <div class="col-lg-9 mt-80 mb-8">
+                                      <div class="h2 mb-48"> Shop Products </div>
+                                      <div class="d-flex flex-wrap">
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Table </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img ">
+                                                      <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                      
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Floor </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                  <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Pendant </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                 <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Wall/Ceiling </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                  <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                  
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Outdoor </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                  <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                  
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> New In </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                  <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                  
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Spare Parts </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                 <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 mt-80 mb-80 menubars">
+                                      <a href="#" tabindex="0">
+                                        <figure class="" >
+                                          <img class="image-products" src="asset/img/new/menu.jpg">
+                                        </figure>
+                                        <span class="c-button c-button--underline button--icon-only u-margin-top-16">
+                                          <span class="button__focus-helper"></span>
+                                        </span>
+                                      </a>
+                                    </div>
+                                    <div class="col-12 menulink"></div>
+                                  </div>
+                                </div> 
+                          </div>
+                        </li>
+                        <li class="nav-item mx-lg-2 my-lg-0 my-3 py-3 py-lg-0">
+                            <a class="nav-link "
+                               href="#"><span>Iconic products</span></a>
+                        </li>
+                        <li class="nav-item dropdown megamenu"><a id="megamneu" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold">Shop By Room</a>
+                          <div aria-labelledby="megamneu" class="dropdown-menu border-0 p-0 m-0" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                             <div class="container">
+                                  <div class="row">
+                                    <div class="col-lg-9 mt-80 mb-8">
+                                      <div class="h2 mb-48"> Shop By Room </div>
+                                      <div class="d-flex flex-wrap">
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Table </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img ">
+                                                      <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                      
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Floor </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                  <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Pendant </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                 <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Wall/Ceiling </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                  <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                  
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Outdoor </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                  <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                  
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> New In </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                  <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                  
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="col-md-4 pr-32 mb-48 menubars">
+                                          <a href="#" class="d-block navs-item" tabindex="0">
+                                            <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                                              <span class="d-flex flex-column">
+                                                <span class="text-bold"> Spare Parts </span>
+                                              </span>
+                                              <div class="d-block navs-item-image-wrapper">
+                                                <figure class="figure-img product-figure-img" >
+                                                 <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                                </figure>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-3 mt-80 mb-80 menubars">
+                                      <a href="#" tabindex="0">
+                                        <figure class="" >
+                                          <img class="image-products" src="asset/img/new/menu.jpg">
+                                        </figure>
+                                        <span class="c-button c-button--underline button--icon-only u-margin-top-16">
+                                          <span class="button__focus-helper"></span>
+                                        </span>
+                                      </a>
+                                    </div>
+                                    <div class="col-12 menulink"></div>
+                                  </div>
+                                </div> 
+                          </div>
+                        </li>
+
+                        <li class="nav-item mx-lg-2 my-lg-0 my-3 py-3 py-lg-0">
+                            <a class="nav-link "
+                               href="#"><span>Designers</span></a>
+                        </li>
+                        <li class="nav-item mx-lg-2 my-lg-0 my-3 py-3 py-lg-0">
+                            <a class="nav-link "
+                               href="#"><span>Stories</span></a>
+                        </li>
+                    </ul>
+                    <strong class="fw-bold border-bottom mt-2 d-lg-none">Account</strong>
+                    <div class="navbar-right d-lg-flex d-none">
+                        <div class="icon mx-3">
+                            <i class="fa-solid fa-magnifying-glass "></i>
+                        </div>
+                        <div class="icon mx-3">
+                            <i class="fa-solid fa-user-tie "></i>
+                        </div>
+                        <div class="icon mx-3">
+                            <i class="fa-solid fa-cart-plus "></i>
+                        </div>
+                    </div>
+                  <!-- <div class="border-bottom"></div> -->
+                </div>
+                
+               
+
+                <!--container-->
+            </nav>
+        </header>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu"><a id="megamneu" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Mega Menu</a>
+        <div aria-labelledby="megamneu" class="dropdown-menu border-0 p-0 m-0">
+           <div class="container">
+                <div class="row">
+                  <div class="col-lg-9 mt-80 mb-8">
+                    <div class="h2 mb-48"> Shop Products </div>
+                    <div class="d-flex flex-wrap">
+                      <div class="col-md-4 pr-32 mb-48 menubars">
+                        <a href="#" class="d-block navs-item" tabindex="0">
+                          <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                            <span class="d-flex flex-column">
+                              <span class="text-bold"> Table </span>
+                            </span>
+                            <div class="d-block navs-item-image-wrapper">
+                              <figure class="figure-img product-figure-img ">
+                                    <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                    
+                              </figure>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-4 pr-32 mb-48 menubars">
+                        <a href="#" class="d-block navs-item" tabindex="0">
+                          <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                            <span class="d-flex flex-column">
+                              <span class="text-bold"> Floor </span>
+                            </span>
+                            <div class="d-block navs-item-image-wrapper">
+                              <figure class="figure-img product-figure-img" >
+                                <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                              
+                              </figure>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-4 pr-32 mb-48 menubars">
+                        <a href="#" class="d-block navs-item" tabindex="0">
+                          <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                            <span class="d-flex flex-column">
+                              <span class="text-bold"> Pendant </span>
+                            </span>
+                            <div class="d-block navs-item-image-wrapper">
+                              <figure class="figure-img product-figure-img" >
+                               <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                              
+                              </figure>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-4 pr-32 mb-48 menubars">
+                        <a href="#" class="d-block navs-item" tabindex="0">
+                          <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                            <span class="d-flex flex-column">
+                              <span class="text-bold"> Wall/Ceiling </span>
+                            </span>
+                            <div class="d-block navs-item-image-wrapper">
+                              <figure class="figure-img product-figure-img" >
+                                <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                
+                              </figure>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-4 pr-32 mb-48 menubars">
+                        <a href="#" class="d-block navs-item" tabindex="0">
+                          <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                            <span class="d-flex flex-column">
+                              <span class="text-bold"> Outdoor </span>
+                            </span>
+                            <div class="d-block navs-item-image-wrapper">
+                              <figure class="figure-img product-figure-img" >
+                                <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                
+                              </figure>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-4 pr-32 mb-48 menubars">
+                        <a href="#" class="d-block navs-item" tabindex="0">
+                          <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                            <span class="d-flex flex-column">
+                              <span class="text-bold"> New In </span>
+                            </span>
+                            <div class="d-block navs-item-image-wrapper">
+                              <figure class="figure-img product-figure-img" >
+                                <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                                
+                              </figure>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-4 pr-32 mb-48 menubars">
+                        <a href="#" class="d-block navs-item" tabindex="0">
+                          <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                            <span class="d-flex flex-column">
+                              <span class="text-bold"> Spare Parts </span>
+                            </span>
+                            <div class="d-block navs-item-image-wrapper">
+                              <figure class="figure-img product-figure-img" >
+                               <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                              </figure>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 mt-80 mb-80 menubars">
+                    <a href="#" tabindex="0">
+                      <figure class="" >
+                        <img class="image-products" src="asset/img/new/menu.jpg">
+                      </figure>
+                      <span class="c-button c-button--underline button--icon-only u-margin-top-16">
+                        <span class="button__focus-helper"></span>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-12 menulink"></div>
+                </div>
+              </div> 
+        </div>
+      </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu dropdown-menu-dark">
+             
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<div id="desktop-0" role="menu" class="c-flyout-menu mega-menu__flyout" aria-labelledby="menu-item-0" aria-hidden="false" js-hook-flyout-menu="">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 mt-80 mb-8">
+        <div class="h2 mb-48"> Shop Products </div>
+        <div class="d-flex flex-wrap">
+          <div class="col-md-4 pr-32 mb-48 menubars">
+            <a href="#" class="d-block navs-item" tabindex="0">
+              <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                <span class="d-flex flex-column">
+                  <span class="text-bold"> Table </span>
+                </span>
+                <div class="d-block navs-item-image-wrapper">
+                  <figure class="figure-img product-figure-img ">
+                        <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                        
+                  </figure>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 pr-32 mb-48 menubars">
+            <a href="#" class="d-block navs-item" tabindex="0">
+              <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                <span class="d-flex flex-column">
+                  <span class="text-bold"> Floor </span>
+                </span>
+                <div class="d-block navs-item-image-wrapper">
+                  <figure class="figure-img product-figure-img" >
+                    <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                  
+                  </figure>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 pr-32 mb-48 menubars">
+            <a href="#" class="d-block navs-item" tabindex="0">
+              <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                <span class="d-flex flex-column">
+                  <span class="text-bold"> Pendant </span>
+                </span>
+                <div class="d-block navs-item-image-wrapper">
+                  <figure class="figure-img product-figure-img" >
+                   <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                  
+                  </figure>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 pr-32 mb-48 menubars">
+            <a href="#" class="d-block navs-item" tabindex="0">
+              <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                <span class="d-flex flex-column">
+                  <span class="text-bold"> Wall/Ceiling </span>
+                </span>
+                <div class="d-block navs-item-image-wrapper">
+                  <figure class="figure-img product-figure-img" >
+                    <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                    
+                  </figure>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 pr-32 mb-48 menubars">
+            <a href="#" class="d-block navs-item" tabindex="0">
+              <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                <span class="d-flex flex-column">
+                  <span class="text-bold"> Outdoor </span>
+                </span>
+                <div class="d-block navs-item-image-wrapper">
+                  <figure class="figure-img product-figure-img" >
+                    <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                    
+                  </figure>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 pr-32 mb-48 menubars">
+            <a href="#" class="d-block navs-item" tabindex="0">
+              <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                <span class="d-flex flex-column">
+                  <span class="text-bold"> New In </span>
+                </span>
+                <div class="d-block navs-item-image-wrapper">
+                  <figure class="figure-img product-figure-img" >
+                    <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                    
+                  </figure>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 pr-32 mb-48 menubars">
+            <a href="#" class="d-block navs-item" tabindex="0">
+              <div class="justify-content-end flex-row-reverse d-flex align-items-center">
+                <span class="d-flex flex-column">
+                  <span class="text-bold"> Spare Parts </span>
+                </span>
+                <div class="d-block navs-item-image-wrapper">
+                  <figure class="figure-img product-figure-img" >
+                   <img class="image-products" src="asset/img/new/oH3fCDNw.jpeg">
+                  </figure>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mt-80 mb-80 menubars">
+        <a href="#" tabindex="0">
+          <figure class="" >
+            <img class="image-products" src="asset/img/new/menu.jpg">
+          </figure>
+          <span class="c-button c-button--underline button--icon-only u-margin-top-16">
+            <span class="button__focus-helper"></span>
+          </span>
+        </a>
+      </div>
+      <div class="col-12 menulink"></div>
+    </div>
+  </div>
+</div>
+<script src="asset/swiper/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="asset/js/bootstrap.min.js"></script>
+    <script src="asset/swiper/swiper-bundle.min.js"></script>
+    <script src="asset/js/aos.js"></script>
+    <script src="asset/js/script.js"></script>
+    <script>AOS.init();</script>
+  </body>
+</html>

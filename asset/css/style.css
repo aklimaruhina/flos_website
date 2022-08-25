@@ -701,7 +701,15 @@ h2.user-title{
 .mt-16{
   margin-top: 16px;
 }
-
+.mt-80{
+  margin-top: 80px
+}
+.mb-8{
+  margin-bottom: 8px;
+}
+.mb-80{
+  margin-bottom: 80px;
+}
 .mb-48{
     margin-bottom: 48px;
 }
@@ -934,17 +942,26 @@ h2.user-title{
     height: 100%;
     padding-bottom: 24px
 }
+.menubars{
+  position: relative;;
+  height: 100%;
+}
 .product-figure-img .image-products{
   opacity: 1;
   transition: 400ms transform cubic-bezier(.25,.46,.45,.94),opacity 200ms ease-out,400ms -webkit-transform cubic-bezier(.25,.46,.45,.94);
 }
 
 html:not(.is-touch) .c-product-tile:hover .product-figure-img .image-products,
-html.is-touch--with-mouse .c-product-tile:hover .product-figure-img .image-products {
+html.is-touch--with-mouse .c-product-tile:hover .product-figure-img .image-products, 
+html:not(.is-touch) .navs-item-image-wrapper:hover .product-figure-img .image-products,
+html.is-touch--with-mouse .navs-item-image-wrapper:hover .product-figure-img .image-products{
     -webkit-transform: scale(1.05);
     transform: scale(1.05)
 }
 
+.navs-item-image-wrapper .product-figure-img:hover .image-products{
+    transform: scale(1.05)
+}
 .product-quote .quote__text{
   font-family: 'Cormorant', serif;
   font-size: 70px;
@@ -1062,4 +1079,99 @@ font-family: "Avenir";
 .shop-breadcrumb a{
   color: #000;
   text-decoration: underline;font-weight: bold;
+}
+div .h2{
+    font-size: 48px;
+    font-family: avenir, Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px)
+
+}
+.pr-32{
+  padding-right: 32px;
+}
+.megamenu {
+        position: static;
+      }
+
+      .megamenu .dropdown-menu {
+        background: #fff;
+        border: none;
+        width: 100%;
+        left:0;
+        opacity: 0;
+        transform: translate3d(0,-40px,0);
+        transition: opacity 150ms linear,transform 150ms cubic-bezier(.25,.46,.45,.94),-webkit-transform 150ms cubic-bezier(.25,.46,.45,.94);
+      }
+      .dropdown-menu{
+        transition: all 0.5s ease-in-out;
+      }
+      .dropdown-menu.show{
+         -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+          pointer-events: all;
+          -webkit-transition: opacity 250ms linear, -webkit-transform 350ms cubic-bezier(.25, .46, .45, .94);
+          transition: opacity 250ms linear, -webkit-transform 350ms cubic-bezier(.25, .46, .45, .94);
+          transition: opacity 250ms linear, transform 350ms cubic-bezier(.25, .46, .45, .94);
+          transition: opacity 250ms linear, transform 350ms cubic-bezier(.25, .46, .45, .94), -webkit-transform 350ms cubic-bezier(.25, .46, .45, .94);
+      }
+.navs-item{
+    padding: 8px 0;
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.15);*/
+    color:  #000;font-weight: bold;
+}
+.navs-item-image-wrapper{
+    margin-right: 32px;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.menulink{
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 24px 0 32px
+
+}
+.c-flyout-menu {
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: var(--color-text);
+    position: relative;
+    opacity: 1;
+    -webkit-transition: 200ms opacity;
+    transition: 200ms opacity
+}
+.mega-menu__flyout {
+    position: fixed;
+    top: var(--header-height);
+    display: block;
+    left: 0;
+    -webkit-transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, -40px, 0);
+    width: 100vw;
+    height: calc(100vh - var(--header-height));
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 150ms linear, -webkit-transform 150ms cubic-bezier(.25, .46, .45, .94);
+    transition: opacity 150ms linear, -webkit-transform 150ms cubic-bezier(.25, .46, .45, .94);
+    transition: opacity 150ms linear, transform 150ms cubic-bezier(.25, .46, .45, .94);
+    transition: opacity 150ms linear, transform 150ms cubic-bezier(.25, .46, .45, .94), -webkit-transform 150ms cubic-bezier(.25, .46, .45, .94)
+}
+
+.mega-menu__item--is-open .mega-menu__flyout {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    pointer-events: all;
+    -webkit-transition: opacity 250ms linear, -webkit-transform 350ms cubic-bezier(.25, .46, .45, .94);
+    transition: opacity 250ms linear, -webkit-transform 350ms cubic-bezier(.25, .46, .45, .94);
+    transition: opacity 250ms linear, transform 350ms cubic-bezier(.25, .46, .45, .94);
+    transition: opacity 250ms linear, transform 350ms cubic-bezier(.25, .46, .45, .94), -webkit-transform 350ms cubic-bezier(.25, .46, .45, .94)
 }
