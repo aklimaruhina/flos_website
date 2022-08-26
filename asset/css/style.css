@@ -1092,16 +1092,24 @@ div .h2{
 .pr-32{
   padding-right: 32px;
 }
+
 .megamenu {
         position: static;
       }
-
+      .navbar.showbg{
+        background-image: url('../img/white.jpg');
+        background-repeat: repeat;
+        background-color: var(--body-color);
+      }
       .megamenu .dropdown-menu {
-        background: #fff;
+         background-image: url('../img/white.jpg');
+        background-repeat: repeat;
+        background-color: var(--body-color);
         border: none;
         width: 100%;
         left:0;
         opacity: 0;
+        border-radius: 0 !important;
         transform: translate3d(0,-40px,0);
         transition: opacity 150ms linear,transform 150ms cubic-bezier(.25,.46,.45,.94),-webkit-transform 150ms cubic-bezier(.25,.46,.45,.94);
       }
@@ -1113,6 +1121,7 @@ div .h2{
           transform: translate3d(0, 0, 0);
           opacity: 1;
           pointer-events: all;
+
           -webkit-transition: opacity 250ms linear, -webkit-transform 350ms cubic-bezier(.25, .46, .45, .94);
           transition: opacity 250ms linear, -webkit-transform 350ms cubic-bezier(.25, .46, .45, .94);
           transition: opacity 250ms linear, transform 350ms cubic-bezier(.25, .46, .45, .94);
