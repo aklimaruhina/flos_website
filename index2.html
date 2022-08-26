@@ -26,12 +26,26 @@
       body {
         font-family: 'Avenir';
       }
+	    .header-bottom{
+		display: block;
+	    position: relative;
+	    z-index: 900;
+	    }
       .navbar-nav .nav-link{
   color: #fff
 }
 .navbar-right .icon i{
   color: #fff
 }
+	    .overflow-hid{
+		    overflow: hidden
+	    }
+	    .megamenu .dropdown-menu{
+		    overflow: auto;
+		    /* overflow-x: auto; */
+		    /* overflow-y: hidden; */
+		    max-height: calc(100vh - 130px);
+	    }
     </style>
   </head>
   <body>
