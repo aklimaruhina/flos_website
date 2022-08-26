@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function(){
             el_link.classList.add('show');
             nextEl.classList.add('show');
           }
-          
+          document.querySelector('body').classList.add('overflow_hid');
         });
         everyitem.addEventListener('mouseleave', function(e){
           let el_link = this.querySelector('a[data-bs-toggle]');
@@ -259,7 +259,8 @@ document.addEventListener("DOMContentLoaded", function(){
             el_link.classList.remove('show');
             nextEl.classList.remove('show');
           }
-          
+           document.querySelector('body').classList.remove('overflow_hid');
+
 
         })
       });
