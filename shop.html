@@ -806,3 +806,288 @@
   </script>
   </body>
 </html>
+<?php
+include_once './vendor/autoload.php';
+
+use App\admin\admin;
+
+$obj = new admin();
+
+$dataServices = $obj->prepare($_POST)->servicesIndex();
+$dataFootSer = $obj->prepare($_POST)->footerSerIndex();
+$dataAbout = $obj->prepare($_POST)->aboutIndex();
+
+$dataBDetails = $obj->prepare($_GET)->newsDetails();
+
+$dataBlog = $obj->prepare($_POST)->blogIndex();
+
+$dataLatestNews = $obj->prepare($_POST)->latestNewsIndex();
+$dataFooterNews = $obj->prepare($_POST)->footerNewsIndex();
+
+
+$title = $dataBDetails[0]['blogTitle'];
+
+$id = $dataBDetails[0]['blogId'];
+$img_url = $dataBDetails[0]['image_url'];
+
+$img = "https://lasacodevelopments.com/Uploads/" . $img_url;
+$count = 25;
+$share_image_width = 300;
+$share_image_height = 200;
+$t = $dataBDetails[0]['details'];
+$words = implode(" ", array_slice(explode(" ", $t), 0, $count));
+$t_title = '@' . $title;
+$short_url = 'https://lasacodevelopments.com/';
+$twitter_params = '?url=' . urlencode($url) . '&text=' . urlencode($t_title);
+$link = "https://twitter.com/intent/tweet" . $twitter_params . "";
+$url = "https://lasacodevelopments.com/news-details.php?blogId=".$id."&submitted-image-url=".$img."&title=".urlencode($title)."&source=".$short_url;
+
+//echo '<pre>';
+//print_r($dataSlide1);
+//exit();
+//
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="News Details" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta property="og:url"           content="<?php echo $url; ?>" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="<?php echo $title; ?>" />
+        <meta property="og:description"   content="<?php echo $words; ?>" />
+        <meta property="og:image"         content="<?php echo $img; ?>" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dtcrehab" />
+        <meta name="twitter:title" content="<?php echo $title; ?>" />
+        <meta name="twitter:description" content="<?php echo $words; ?>" />
+        <meta name="twitter:image0" content="<?php echo $img; ?>" />
+        <title>
+            Lasaco Developments Ltd. -  
+            <?php
+            foreach ($dataBDetails as $itemBDetails) {
+                echo $itemBDetails['blogTitle'];
+            }
+            ?>
+
+        </title>
+
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/lasaco-icon.png" />
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
+        <!-- animate -->
+        <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+
+        <!-- owl-carousel -->
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+
+        <!-- themify -->
+        <link rel="stylesheet" type="text/css" href="css/themify-icons.css"/>
+
+        <!-- flaticon -->
+        <link rel="stylesheet" type="text/css" href="css/flaticon.css"/>
+
+        <!-- prettyphoto -->
+        <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+
+        <!-- shortcodes -->
+        <link rel="stylesheet" type="text/css" href="css/shortcodes.css"/>
+
+        <!-- main -->
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+        <!-- responsive -->
+        <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+
+    </head>
+
+    <body>
+
+        <!--page start-->
+        <div class="page sidebar-true">
+
+
+            <!--header start-->
+            <?php
+            include_once './header.php';
+            ?>
+            <!--header end-->
+
+            <!-- page-title -->
+            <div class="ttm-page-title-row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12"> 
+                            <div class="title-box ttm-textcolor-white">
+                                <div class="page-title-heading">
+                                    <h1 class="title">Blog Details</h1>
+                                </div><!-- /.page-title-captions -->
+                                <div class="breadcrumb-wrapper">
+                                    <span>
+                                        <a title="Homepage" href="/"><i class="ti ti-home"></i>&nbsp;&nbsp;Home</a>
+                                    </span>
+                                    <span class="ttm-bread-sep">&nbsp; | &nbsp;</span>
+                                    <span> Blogs </span>
+                                </div>  
+                            </div>
+                        </div><!-- /.col-md-12 -->  
+                    </div><!-- /.row -->  
+                </div><!-- /.container -->                      
+            </div><!-- page-title end-->
+
+            <!--site-main start-->
+            <div class="site-main">
+                <!-- sidebar -->
+                <div class="sidebar ttm-sidebar-right ttm-bgcolor-white clearfix">
+                    <div class="container">
+                        <!-- row -->
+                        <div class="row d-block">
+
+                            <?php
+                            foreach ($dataBDetails as $itemBDetails) {
+                                ?> 
+                                <div class="col-lg-9 content-area pull-left">
+                                    <!-- ttm-blog-classic-->
+                                    <article class="post ttm-blog-classic">
+
+                                        <div class="ttm-blog-classic-content single-blog">
+                                            <div class="mb-30">
+                                                <img src="Uploads/<?php echo $itemBDetails['image_url']; ?>" class="img-fluid" alt="<?php echo $itemBDetails['blogTitle']; ?>">
+                                            </div>
+                                            <div class="featured-content featured-content-post">
+                                                <h4><?php echo $itemBDetails['blogTitle']; ?></h4>
+
+                                                <div class="separator">
+                                                    <div class="sep-line solid mt-10 mb-20"></div>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <?php echo $itemBDetails['blogDetails']; ?>
+                                                </div>
+                                            </div>
+
+                                            <div class="separator">
+                                                <div class="sep-line solid mt-30 mb-30"></div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="social-icons circle social-hover pull-left res-767-fnone">
+                                                    <div class="ttm-social-share-title d-inline-block">
+                                                        <h5>Share This News</h5>
+                                                    </div>
+                                                    <ul class="list-inline mb-0 d-inline-block">
+                                                        <li class="social-facebook">
+                                                            
+                                                            <a href="https://www.facebook.com/sharer/sharer.php?t=<?php echo $title; ?>&u=<?php echo $url ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                        <li class="social-twitter"><a href="<?php echo $link; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                        <li class="social-linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $url; ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                                   
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </article>
+                                    <!-- ttm-blog-classic end -->
+                                </div>
+                                <?php
+                            }
+                            ?>
+                            <div class="col-lg-3 widget-area ttm-bgcolor-grey pull-right">
+
+                                <aside class="widget widget-text">
+                                    <div class="ttm-author-widget">
+                                        <?php
+                                        foreach ($dataAbout as $itemAbout) {
+                                            ?>
+                                            <div class="author-widget_img">
+                                                <img class="author-img" src="Uploads/<?php echo $itemAbout['image_url']; ?>" alt="Lasaco Developments Ltd.">
+                                            </div>
+                                            <h4 class="">Lasaco Developments Ltd.</h4>
+
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.15982306394466!2d90.43281324935978!3d23.7987785270583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c72dd309ff57%3A0x9a19fd2e99a87c0f!2s40%20No%20Ward%20Councilor%20Office%20.%20DNCC!5e0!3m2!1sbn!2sbd!4v1617803282478!5m2!1sbn!2sbd" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                </aside>
+
+
+                                <aside class="widget contact-widget">
+                                    <h3 class="widget-title">Get in touch</h3>      
+                                    <ul class="contact-widget-wrapper">
+                                        <li><i class="fa fa-map-marker"></i>Plot# 22, Block# A, Main Road, Bashundhara R/A, Dhaka.</li>
+                                        <li><i class="fa fa-phone"></i>+880 1760 884400, 01970 220037</li>
+                                        <li><i class="fa fa-envelope-o"></i><a href="mailto:info@lasacodevelopments.com" target="_blank">info@lasacodevelopments.com</a></li>
+                                        <li><i class="fa fa-calendar"></i>Saturday - Thursday</li>
+                                        <li><i class="ti ti-alarm-clock"></i>09:00 AM -06:00 PM</li>
+                                    </ul>
+                                </aside>
+
+                                <aside class="widget post-widget">
+                                    <h3 class="widget-title">Latest News</h3>
+                                    <ul class="widget-post ttm-recent-post-list">
+                                        <?php
+                                        foreach ($dataLatestNews as $itemLatestNews) {
+                                            ?>
+                                            <li>
+                                                <a href="news-details.php?blogId=<?php echo $itemLatestNews['blogId']; ?>"><img src="Uploads/<?php echo $itemLatestNews['image_url']; ?>" alt="post-img"></a>
+
+                                                <a href="news-details.php?blogId=<?php echo $itemLatestNews['blogId']; ?>" class="clearfix"><?php echo $itemLatestNews['blogTitle']; ?></a>
+                                            </li>
+                                            <?php
+                                        }
+                                        ?>
+                                    </ul>
+                                </aside>
+
+                            </div>
+                        </div><!-- row end -->
+
+                    </div>
+                </div>
+                <!-- sidebar end -->
+            </div><!--site-main end-->
+
+            <!--footer start-->
+            <?php
+            include_once './footer.php';
+            ?>
+            <!--footer end-->
+
+            <!--back-to-top start-->
+            <a id="totop" href="#top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+            <!--back-to-top end-->
+
+        </div><!-- page end -->
+
+
+        <!-- Javascript -->
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.js"></script>    
+        <script src="js/jquery-waypoints.js"></script>    
+        <script src="js/jquery-validate.js"></script> 
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/numinate.min6959.js?ver=4.9.3"></script>
+        <script src="js/main.js"></script>
+        <script src="js/chart.js"></script>
+
+        <!-- Javascript end-->
+
+    </body>
+</html>
